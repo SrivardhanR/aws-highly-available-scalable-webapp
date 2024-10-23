@@ -12,7 +12,7 @@ As part of the AWS Academy Lab, this project adheres to the following goals:
 Cloud-native architecture using AWS best practices.
 Hands-on learning with AWS services like EC2, RDS, Auto Scaling, Load Balancer, VPC, and Secrets Manager.
 Cost optimization within a budget of $100/month.
-Architecture Diagram
+
 
 Phases of Implementation
 Phase 1: Planning and Design
