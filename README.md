@@ -1,5 +1,5 @@
 # aws-highly-available-scalable-webapp
-This repository contains the project files for building a highly available, scalable web application on AWS. This project is part of the AWS Academy Lab Project, where we implement real-world use cases using various AWS services to demonstrate best practices for scalability, availability, and cost optimization.
+This repository contains the project files for building a highly available, scalable web application on AWS. This project is part of the AWS Academy Lab Project, where I implemented real-world use cases using various AWS services to demonstrate best practices for scalability, availability, and cost optimization.
 
 Project Overview
 This project involves multiple phases:
@@ -16,7 +16,7 @@ Architecture Diagram
 
 Phases of Implementation
 Phase 1: Planning and Design
-In this phase, we planned the architecture and estimated the cost of the AWS services required for the project. The core AWS services involved include:
+In this phase, I planned the architecture and estimated the cost of the AWS services required for the project. The core AWS services involved include:
 
 Elastic Load Balancer (ELB): Distributes traffic across multiple EC2 instances.
 Auto Scaling Group (ASG): Automatically adjusts the number of EC2 instances based on traffic.
@@ -27,55 +27,49 @@ Security Groups and NACLs: To ensure secure access to resources.
 Amazon S3 or EFS (Optional): For storing static assets or backups.
 Phase 2: Creating a Basic Functional Web Application
 Task 1: Creating a Virtual Network
-Set up a Virtual Private Cloud (VPC) with subnets for hosting the web application.
-
-Reference:
-AWS Academy Cloud Architecting – Lab: Creating a Virtual Private Cloud
+I set up a Virtual Private Cloud (VPC) with subnets for hosting the web application.
 
 Task 2: Creating a Virtual Machine
-Launch an EC2 instance using the latest Ubuntu AMI to host the web application. Install necessary packages using the JavaScript code from the following link:
+I launched an EC2 instance using the latest Ubuntu AMI to host the web application. I installed the necessary packages using the JavaScript code provided by aws from UserdataScript-phase-2(1).sh
 
-SolutionCodePOC
 
 Task 3: Testing the Deployment
-Access the web application using the IPv4 address of the EC2 instance and test CRUD operations such as viewing, adding, deleting, or modifying records.
+I accessed the web application using the IPv4 address of the EC2 instance and tested CRUD operations such as viewing, adding, deleting, or modifying records.
 
 Phase 3: Decoupling the Application Components
 Task 1: Updating the VPC Configuration
-Modify the VPC to include private subnets in at least two Availability Zones.
+I modified the VPC to include private subnets in at least two Availability Zones.
 
 Task 2: Creating and Configuring Amazon RDS
-Provision an Amazon RDS instance with MySQL. Configure the database to be accessed only by the web application.
+I provisioned an Amazon RDS instance with MySQL and configured the database to be accessed only by the web application.
 
 Task 3: Configuring the Development Environment
-Provision an AWS Cloud9 environment and connect using SSH.
+I provisioned an AWS Cloud9 environment and connected using SSH.
 
 Task 4: Using AWS Secrets Manager
-Create a secret for database credentials using AWS Secrets Manager. Use the provided script to configure Secrets Manager:
-
-AWS Cloud9 Scripts
+I created a secret for database credentials using AWS Secrets Manager. I used the provided script to configure Secrets Manager: cloud9-scripts.yml
 
 Task 5: Provisioning a New Web Server Instance
-Launch another EC2 instance for the web application and configure it to connect to Amazon RDS.
+I launched another EC2 instance for the web application and configured it to connect to Amazon RDS.
 
 Task 6: Migrating the Database
-Use a provided script to migrate data from the original EC2-hosted database to the Amazon RDS instance.
+I used a provided script to migrate data from the original EC2-hosted database to the Amazon RDS instance.
 
 Task 7: Testing the Application
-Test the application again by performing CRUD operations.
+I tested the application again by performing CRUD operations.
 
 Phase 4: Implementing High Availability and Scalability
 Task 1: Creating an Application Load Balancer
-Set up an Application Load Balancer to distribute incoming traffic across multiple instances.
+I set up an Application Load Balancer to distribute incoming traffic across multiple instances.
 
 Task 2: Implementing EC2 Auto Scaling
-Configure EC2 Auto Scaling using a launch template. Ensure that the Auto Scaling group adjusts the number of EC2 instances based on traffic.
+I configured EC2 Auto Scaling using a launch template and ensured that the Auto Scaling group adjusts the number of EC2 instances based on traffic.
 
 Task 3: Accessing the Application
-Access the web application using the Load Balancer's endpoint and test its functionality.
+I accessed the web application using the Load Balancer's endpoint and tested its functionality.
 
 Task 4: Load Testing
-Perform load testing using a provided script to validate the scalability of the web application:
+I performed load testing using a provided script to validate the scalability of the web application:
 
 AWS Cloud9 Load Testing Script
 
